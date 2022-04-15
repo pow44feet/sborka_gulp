@@ -1,3 +1,1 @@
-import {work} from "./func";
-
-work();
+const header = document.querySelector(".header");
