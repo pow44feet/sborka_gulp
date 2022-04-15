@@ -89,6 +89,7 @@ const htmlInclude = () => {
 const imagesToApp = () => {
     return src(["./src/images/**/*.jpg", "./src/images/**/*.png", "./src/images/**/*.jpeg", "./src/images/**/*.webp"])
         .pipe(dest("./app/images"))
+        .pipe(browserSync.stream());
 }
 
 const others = () => {
@@ -101,7 +102,8 @@ const clean = () => {
 }
 
 const scripts = () => {
-    return src("./src/js/scripts.js")
+    return src("./src/js/*.js")
+    /*
     .pipe(webpackStream({
         mode: "development",
         output: {
@@ -128,6 +130,7 @@ const scripts = () => {
         console.error('WEBPACK ERROR', err);
         this.emit('end'); // Don't stop the rest of the task
     })
+    */
     .pipe(dest("./app/js/"))
     .pipe(browserSync.stream());
 }
