@@ -1,8 +1,16 @@
 @import "mixins";
 @import "fonts";
 @import "vars";
-@import "colors";
 @import "reset";
+
+:root {
+  --white-color: #ffffff;
+  --black-color: #000000;
+}
+
+$white-color: #ffffff;
+$black-color: #000000;
+
 @import "blocks/visually-hidden";
 @import "blocks/button";
 @import "blocks/container";
